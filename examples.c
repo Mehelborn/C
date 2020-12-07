@@ -89,7 +89,7 @@ void print_table(void) {
 }
 void add_new_note() {
   int exit_key;
-  file_ptr = fopen("Students.dat", "wb");
+  file_ptr = fopen("Students.dat", "ab");
   do {
         printf("\nEnter information about a student");
         printf("\nLastname: ");
