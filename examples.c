@@ -15,13 +15,15 @@ FILE *file_ptr;
 void new_table(void);
 void print_table(void);
 void add_new_note(void);
+void print_only_Dpupils(void);
 
 int main(void) {
     int the_key;
     printf("1. Create a new table in a file;\n");
     printf("2. Print the table;\n");
-    printf("3. Add a new student to the beginning;\n");
-    printf("4. Exit.\n");
+    printf("3. Print only D-pupils;\n");
+    printf("4. Add a new student to the beginning;\n");    
+    printf("5. Exit.\n");
     scanf("%d", &the_key);
     if(the_key == 1) {
         new_table();    
@@ -30,9 +32,12 @@ int main(void) {
         print_table();
     }
     else if(the_key == 3) {
-        add_new_note();
+        print_only_Dpupils();
     }
     else if(the_key == 4) {
+        add_new_note();
+    }
+    else if(the_key == 5) {
         return 0;
     }
     else printf("ERROR: Please choose the option number.");
@@ -84,9 +89,32 @@ void print_table(void) {
         fread(&student, sizeof(student), 1, file_ptr);
         i++;
     }
-
+    fclose(file_ptr);
     getchar();
 }
+
+void print_only_Dpupils(void) {
+    file_ptr = fopen("Students.dat", "rb");
+
+    fread(&student, sizeof(student), 1, file_ptr);
+
+    printf("%-25s%-25s%-25s%-25s%-25s%-25s", 
+            "Lastname", "RB number", "Russian language", 
+            "Mathematics", "Programming", "Physics");
+    int i = 1;
+    while(!feof(file_ptr)) {
+        if(student.rlang == 2 || student.maths == 2 || student.proging == 2 || student.phys == 2) {            
+            printf("\n\n%d. %-25s%-25d%-25d%-25d%-25d%-25d",
+            i, student.lastname, student.rbnum, student.rlang,
+            student.maths, student.proging, student.phys);            
+        }
+        fread(&student, sizeof(student), 1, file_ptr);  
+        i++;   
+    }
+    fclose(file_ptr);
+    getchar();
+}
+
 void add_new_note() {
   int exit_key;
   file_ptr = fopen("Students.dat", "ab");
