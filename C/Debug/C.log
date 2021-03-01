@@ -1,0 +1,17 @@
+﻿  example.cpp
+C:\Users\John Smith\Documents\GitHub\C\C\example.cpp(24,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
+C:\Users\John Smith\Documents\GitHub\C\C\example.cpp(80,19): warning C4477: 'scanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'short *'
+C:\Users\John Smith\Documents\GitHub\C\C\example.cpp(80,19): message : consider using '%hd' in the format string
+C:\Users\John Smith\Documents\GitHub\C\C\example.cpp(82,19): warning C4477: 'scanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'short *'
+C:\Users\John Smith\Documents\GitHub\C\C\example.cpp(82,19): message : consider using '%hd' in the format string
+C:\Users\John Smith\Documents\GitHub\C\C\example.cpp(84,19): warning C4477: 'scanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'short *'
+C:\Users\John Smith\Documents\GitHub\C\C\example.cpp(84,19): message : consider using '%hd' in the format string
+C:\Users\John Smith\Documents\GitHub\C\C\example.cpp(86,19): warning C4477: 'scanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'short *'
+C:\Users\John Smith\Documents\GitHub\C\C\example.cpp(86,19): message : consider using '%hd' in the format string
+C:\Users\John Smith\Documents\GitHub\C\C\example.cpp(88,19): warning C4477: 'scanf' : format string '%d' requires an argument of type 'int *', but variadic argument 1 has type 'short *'
+C:\Users\John Smith\Documents\GitHub\C\C\example.cpp(88,19): message : consider using '%hd' in the format string
+C:\Users\John Smith\Documents\GitHub\C\C\example.cpp(110,14): error C2374: 'p': redefinition; multiple initialization
+C:\Users\John Smith\Documents\GitHub\C\C\example.cpp(61): message : see declaration of 'p'
+C:\Users\John Smith\Documents\GitHub\C\C\example.cpp(112,20): warning C4473: 'fprintf' : not enough arguments passed for format string
+C:\Users\John Smith\Documents\GitHub\C\C\example.cpp(112,20): message : placeholders and their parameters expect 6 variadic arguments, but 0 were provided
+C:\Users\John Smith\Documents\GitHub\C\C\example.cpp(112,20): message : the missing variadic argument 1 is required by format string '%s'

@@ -1,0 +1,2 @@
+C:\Users\John Smith\Documents\GitHub\C\C\Debug\C.exe
+C:\Users\John Smith\Documents\GitHub\C\C\Debug\C.pdb
